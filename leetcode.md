@@ -149,3 +149,9 @@
 
   * create a mapping of single roman numerals (I, V, X, L, C, D, M) and two letter roman numerals (IV, IX, XL, XC, CD, CM) that map to their numerical value
   * trick - greedily subtract the largest roman numeral possible, and build the roman numeral as you go along
+
+[#1586](https://leetcode.com/problems/binary-search-tree-iterator-ii/) Binary Search Tree Iterator II
+
+  * perform a inorder traversal with stack and build an arraylist of tree values (sorted)
+  * init a pointer to -1
+  * increment pointer when next() is called, decrement pointer when prev() is called
