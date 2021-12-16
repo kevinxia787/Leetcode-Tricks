@@ -155,3 +155,9 @@
   * perform a inorder traversal with stack and build an arraylist of tree values (sorted)
   * init a pointer to -1
   * increment pointer when next() is called, decrement pointer when prev() is called
+
+[#34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) Find First and Last Position of Element in Sorted Array
+  
+  * use binary search - two functions, one for start idx and one for end idx
+  * in each binary search maintain an int mapped to largest or smallest int - when you find occurence of target, compare the mid idx to the curr smallest idx.
+  * Could also be asked like so - Find all counts of target in sorted Array with Duplicates (simply sub the end and start idx)
