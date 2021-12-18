@@ -46,6 +46,22 @@
     ```
   * If the reversed val is greater than `Integer.MAX_VALUE / 10` or less than `Integer.MIN_VALUE / 10` then next digit added will case reversed to overflow. We need to return 0 here.
 
+[#11](https://leetcode.com/problems/container-with-most-water/) Container with Most Water
+
+  * two pointers - left starts at beginning, right starts at end
+  * pointer movement strategy is as follows:
+    
+    ```
+    int currArea = Math.min(heights[left], heights[right]) * right - left;
+    maxArea = Math.max(maxArea, currArea);
+    if (heights[left] <= heights[right]) {
+      left++;
+    }
+    else {
+      right--;
+    }
+    ```
+
 [#12](https://leetcode.com/problems/integer-to-roman/) Integer to Roman
 
   * create a mapping of single roman numerals (I, V, X, L, C, D, M) and two letter roman numerals (IV, IX, XL, XC, CD, CM) that map to their numerical value
@@ -64,6 +80,42 @@
   * if value greater than 0, we can break because its impossible for the remaining values (since its sorted) to sum to 0
   * if curr num and next num not equal to each other, we can binary search for pair that sums to zero with the current index
   * remember that in the binary search helper you need to iterate until we don't see any duplicate numbers
+
+[#19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) Delete Nth Node from End of Linked List
+
+  * Nth node from end - can calculate index to delete using len(list) - n
+  * maintain a sentinel node and ptr to sentinel node and build new list
+  * if currIndex == len(list) - n, skip node.
+  * one pass solution: maintain two ptrs. ptr1 is n + 1 (1 indexed) nodes ahead of ptr2. advance ptr1 and ptr2 until ptr1 is null
+  * ptr2 now points to node that needs to be deleted.
+
+[#20](https://leetcode.com/problems/valid-parentheses/) Valid Parentheses
+
+  * use a stack - when we see any type of open paren/bracket/brace, we push the closed version on to the stack. if we see a closed paren/bracket/brace:
+    
+    * if stack is empty -> return false
+    * if peek is not equal to current paren/bracket/brace then we return false
+  
+[#21](https://leetcode.com/problems/merge-two-sorted-lists/) Merged Two Sorted Lists
+
+  * recursive function
+
+    * if both lists null --> return null
+    * if one list null --> return other
+    * if list1.val < list2.val 
+      
+      * create dummy node with list1.val
+      * dummy.next = recursiveMerge(list1.next, list2)
+    * else
+
+      * create dummy node with list2.val
+      * dummy.next = recursiveMerge(list1, list2.next)
+
+[#23](https://leetcode.com/problems/merge-k-sorted-lists/) Merge K Sorted Lists
+  
+  * leverage PriorityQueue
+  * iterate through each LinkedList then add value to PriorityQueue Library
+  * iterate through priorityqueue and build new LinkedList
 
 [#25](https://leetcode.com/problems/reverse-nodes-in-k-group/) Reverse nodes in K group
 
