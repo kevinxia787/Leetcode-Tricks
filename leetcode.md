@@ -123,12 +123,41 @@
   * using dummy ptr build the first k nodes, maintain pointer to the rest of the nodes.
   * recursive call on the rest of the nodes, and connect the result to the end of the reversed k nodes
 
+[#33](https://leetcode.com/problems/search-in-rotated-sorted-array/) Search in a Rotated Sorted Array
+
+  * use binary search to find pivot
+  *
+    ```
+    if (nums[mid] > nums[right]) {
+      left = mid + 1;
+    }
+    else {
+      right = mid;
+    }
+    ```
+  * then use binary search to search ranges from start to pivot, and pivot + 1 to end
+
 [#34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) Find First and Last Position of Element in Sorted Array
   
   * use binary search - two functions, one for start idx and one for end idx
   * in each binary search maintain an int mapped to largest or smallest int - when you find occurence of target, compare the mid idx to the curr smallest idx.
   * Could also be asked like so - Find all counts of target in sorted Array with Duplicates (simply sub the end and start idx)
 
+[#39](https://leetcode.com/problems/combination-sum/) Combination Sum
+
+  * use backtracking
+  * in recursive backtracking keep track of curr sum and compare to target
+  * in for loop if currSum + currNum exceeds target we continue (skip the currNum)
+  * don't forget to backtrack adding currNum to buffer list AND backtrack adding currNum to currSum
+
+[#48](https://leetcode.com/problems/rotate-image/) Rotate Image
+
+  * transpose then reverse each row
+
+[#49](https://leetcode.com/problems/group-anagrams/) Group Anagrams
+
+  * sort each string in list of words
+  * the sorted version of a word is its anagram mapping key - all words that are anagrams of each other have the same key in the map.
 
 [#198](https://leetcode.com/problems/house-robber/) House Robber
 
