@@ -153,6 +153,7 @@
 [#48](https://leetcode.com/problems/rotate-image/) Rotate Image
 
   * transpose then reverse each row
+  * when transposing, start innerloop index at + 1 of outerloop index, e.g. j = i + 1, where i starts at 0. 
 
 [#49](https://leetcode.com/problems/group-anagrams/) Group Anagrams
 
