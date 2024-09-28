@@ -161,6 +161,7 @@
 
 [#50](https://leetcode.com/problems/powx-n/) Pow(x, n)
   * use recursion
+  * if n is int, convert it to long
   * If exponent n is even: pow(x, n) == pow(x * x, n/2)
   * If exponent n is odd: pow(x, n) == x * pow(x * x, (n-1)/2). The first extraction of x converts exponent n to an even number. Then we can use the above pattern. 
 
