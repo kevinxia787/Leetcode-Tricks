@@ -159,6 +159,11 @@
   * sort each string in list of words
   * the sorted version of a word is its anagram mapping key - all words that are anagrams of each other have the same key in the map.
 
+[#50](https://leetcode.com/problems/powx-n/) Pow(x, n)
+  * use recursion
+  * If exponent n is even: pow(x, n) == pow(x * x, n/2)
+  * If exponent n is odd: pow(x, n) == x * pow(x * x, (n-1)/2). The first extraction of x converts exponent n to an even number. Then we can use the above pattern. 
+
 [#198](https://leetcode.com/problems/house-robber/) House Robber
 
   * dynamic programming
