@@ -5,6 +5,12 @@
 * iterate through input, adding num and its idx into a hashmap
 * iterate again, this time calculate the complement. check if the complement exists in the map, and return the idx pair
 
+[#2](https://leetcode.com/problems/add-two-numbers/description/) Add two numbers
+* maintain 2 pointers (one for each list), intialize carry over
+* if one of the list pointers is null, use 0 as that list's curr value.
+* each time you sum two vals include the carry over
+* after both pointers are null, if carry over is 1, need to add it to the result.
+
 [#3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) Longest SubString Without Repeating Characters
 
   * use sliding window
