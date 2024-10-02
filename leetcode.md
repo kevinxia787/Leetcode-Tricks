@@ -170,7 +170,13 @@
   * use recursion
   * if n is int, convert it to long
   * If exponent n is even: pow(x, n) == pow(x * x, n/2)
-  * If exponent n is odd: pow(x, n) == x * pow(x * x, (n-1)/2). The first extraction of x converts exponent n to an even number. Then we can use the above pattern. 
+  * If exponent n is odd: pow(x, n) == x * pow(x * x, (n-1)/2). The first extraction of x converts exponent n to an even number. Then we can use the above pattern.
+
+[#167]([https:](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) Two Sum II - Sorted Input Array
+  * two pointers, lo + hi
+  * if num[lo] + num[hi] == target, found your answer
+  * if num[lo] + num[hi] < target, increment lo
+  * if num[lo] + num[hi] > target, decrement hi
 
 [#198](https://leetcode.com/problems/house-robber/) House Robber
 
